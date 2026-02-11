@@ -144,9 +144,9 @@ const certifications: Certification[] = [
 ];
 
 const skills = {
-  frontend: ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "Next.js", "Tailwind CSS"],
-  backend: ["Node.js", "Express", "REST API", "Basic SQL"],
-  tools: ["Git & GitHub", "VS Code", "Postman", "Figma", "Vercel"],
+  frontend: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React", "Next.js", "Tailwind CSS"],
+  backend: ["Node.js", "Express", "REST API", "PostgreSQL", "MySQL", "MongoDB", "Prisma"],
+  tools: ["Git & GitHub", "VS Code", "Postman", "Docker", "Figma", "Vercel"],
 };
 
 export default function Home() {
@@ -224,7 +224,7 @@ export default function Home() {
               <span className="text-sm font-semibold text-[#0B0F19]">
                 Nizar Nur Afif
               </span>
-              <span className="text-xs text-slate-500">Junior Web Developer</span>
+              <span className="text-xs text-slate-500">Fullstack Developer</span>
             </div>
           </a>
 
@@ -249,9 +249,9 @@ export default function Home() {
           id="home"
           className="flex flex-col gap-10 pb-16 pt-2 md:flex-row md:items-center md:justify-between"
         >
-          <div className="space-y-6">
+          <div className="space-y-6 flex-1">
             <p className="inline-flex items-center rounded-full bg-[#F1F5F9] px-3 py-1 text-xs font-medium text-[#0F766E]">
-              Junior Web Developer · Indonesia
+              Fullstack Developer · Indonesia
             </p>
             <h1
               className={`text-3xl font-bold tracking-tight text-[#0B0F19] sm:text-4xl md:text-[2.6rem] md:leading-tight transition duration-150 drop-shadow-sm ${
@@ -263,7 +263,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">
-              Saya adalah Web Developer profesional yang berdedikasi untuk menciptakan solusi digital yang elegan dan berdampak. Saya memadukan estetika desain dengan keunggulan teknis untuk membangun aplikasi web yang tidak hanya responsif dan cepat, tetapi juga memberikan pengalaman pengguna yang intuitif dan mendalam.
+              Saya adalah Fullstack Developer profesional yang berdedikasi untuk menciptakan solusi digital end-to-end yang elegan dan berdampak. Dengan keahlian di frontend dan backend, saya membangun aplikasi web yang tidak hanya responsif dan cepat, tetapi juga scalable, aman, dan memberikan pengalaman pengguna yang intuitif.
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <a
@@ -282,28 +282,73 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-4 w-full max-w-xs rounded-lg bg-[#F1F5F9] p-4 shadow-sm md:mt-0">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-              Quick profile
-            </p>
-            <dl className="mt-3 space-y-2 text-xs text-slate-700">
-              <div className="flex justify-between gap-4">
-                <dt className="text-slate-500">Role</dt>
-                <dd className="font-medium text-[#111827]">Junior Web Developer</dd>
+          <div className="flex flex-col gap-6 items-center md:items-end">
+            {/* Profile Photo with Decorative Elements */}
+            <div className="relative group">
+              {/* Gradient Background Orbs */}
+              <div className="absolute -top-8 -left-8 w-32 h-32 bg-gradient-to-br from-teal-400/30 to-emerald-400/30 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-2xl"></div>
+              
+              {/* Main Photo Container */}
+              <div className="relative">
+                {/* Decorative Border */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-teal-500 via-emerald-500 to-cyan-500 rounded-2xl blur-sm opacity-40 group-hover:opacity-60 transition duration-300"></div>
+                
+                {/* Photo Frame */}
+                <div className="relative w-64 h-80 rounded-2xl overflow-hidden border-4 border-white shadow-2xl bg-gradient-to-br from-slate-100 to-slate-50">
+                  <Image
+                    src="/images/pp.png"
+                    alt="Nizar Nur Afif - Fullstack Developer"
+                    fill
+                    className="object-cover object-top"
+                    sizes="256px"
+                    priority
+                  />
+                </div>
+
+                {/* Floating Tech Badges */}
+                <div className="absolute -top-3 -left-3 bg-white rounded-lg px-3 py-1.5 shadow-lg border border-teal-100 animate-bounce" style={{animationDuration: '3s'}}>
+                  <span className="text-xs font-bold text-teal-700">⚡ React</span>
+                </div>
+                
+                <div className="absolute -bottom-3 -right-3 bg-white rounded-lg px-3 py-1.5 shadow-lg border border-emerald-100 animate-bounce" style={{animationDuration: '3.5s', animationDelay: '0.5s'}}>
+                  <span className="text-xs font-bold text-emerald-700">🚀 Next.js</span>
+                </div>
+
+                <div className="absolute top-1/4 -right-4 bg-white rounded-lg px-3 py-1.5 shadow-lg border border-blue-100 animate-bounce" style={{animationDuration: '4s', animationDelay: '1s'}}>
+                  <span className="text-xs font-bold text-blue-700">💾 Node.js</span>
+                </div>
+
+                {/* Decorative Geometric Shapes */}
+                <div className="absolute -top-6 right-8 w-12 h-12 border-4 border-teal-300/50 rounded-lg rotate-12 group-hover:rotate-45 transition-transform duration-500"></div>
+                <div className="absolute -bottom-4 left-4 w-8 h-8 bg-gradient-to-br from-emerald-400/40 to-teal-400/40 rounded-full"></div>
               </div>
-              <div className="flex justify-between gap-4">
-                <dt className="text-slate-500">Focus</dt>
-                <dd className="font-medium text-[#111827]">
-                  Frontend · Basic backend
-                </dd>
-              </div>
-              <div className="flex justify-between gap-4">
-                <dt className="text-slate-500">Availability</dt>
-                <dd className="font-medium text-[#111827]">
-                  Open for opportunities
-                </dd>
-              </div>
-            </dl>
+            </div>
+
+            {/* Quick Profile Card */}
+            <div className="w-full max-w-xs rounded-lg bg-[#F1F5F9] p-4 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                Quick profile
+              </p>
+              <dl className="mt-3 space-y-2 text-xs text-slate-700">
+                <div className="flex justify-between gap-4">
+                  <dt className="text-slate-500">Role</dt>
+                  <dd className="font-medium text-[#111827]">Fullstack Developer</dd>
+                </div>
+                <div className="flex justify-between gap-4">
+                  <dt className="text-slate-500">Focus</dt>
+                  <dd className="font-medium text-[#111827]">
+                    Frontend · Backend · Database
+                  </dd>
+                </div>
+                <div className="flex justify-between gap-4">
+                  <dt className="text-slate-500">Availability</dt>
+                  <dd className="font-medium text-[#111827]">
+                    Open for opportunities
+                  </dd>
+                </div>
+              </dl>
+            </div>
           </div>
         </section>
 
@@ -321,16 +366,16 @@ export default function Home() {
             </div>
             <div className="space-y-4 text-sm leading-relaxed text-slate-600 sm:text-base">
               <p>
-                Saya seorang junior web developer yang terbiasa bekerja dengan
-                stack JavaScript modern (React, Next.js) dan Tailwind CSS.
-                Fokus saya adalah membuat tampilan yang konsisten, mudah dibaca,
-                dan mudah dikembangkan lebih lanjut oleh tim.
+                Saya seorang fullstack developer yang berpengalaman membangun aplikasi web
+                dari frontend hingga backend. Terbiasa bekerja dengan stack JavaScript/TypeScript modern
+                (React, Next.js) untuk frontend, dan Node.js dengan Express untuk backend,
+                serta database relational (PostgreSQL, MySQL) maupun NoSQL (MongoDB).
               </p>
               <p>
-                Dalam project, saya memperhatikan struktur folder, penamaan
-                komponen, dan pemisahan logika agar codebase tetap teratur. Saya
-                nyaman membaca dokumentasi, belajar dari contoh, dan berdiskusi
-                dengan developer yang lebih senior.
+                Dalam setiap project, saya fokus pada arsitektur yang scalable, clean code,
+                dan best practices seperti RESTful API design, database optimization, dan
+                security. Saya juga memperhatikan struktur folder, separation of concerns,
+                dan dokumentasi yang baik agar codebase mudah di-maintain oleh tim.
               </p>
             </div>
           </div>
@@ -608,65 +653,148 @@ export default function Home() {
             <div className="mb-6 md:mb-0">
               <h2 className="text-sm font-semibold text-[#0B0F19]">Contact</h2>
               <p className="mt-2 text-xs text-slate-500">
-                Informasi kontak yang biasanya diminta di lamaran kerja.
+                Kirim pesan langsung atau hubungi melalui kontak di bawah.
               </p>
             </div>
-            <div className="space-y-6 text-sm text-slate-600">
-              <p>
-                Jika profil ini relevan dengan kebutuhan tim Anda, silakan
-                hubungi saya melalui email atau profil profesional di bawah ini.
-              </p>
-              <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
-                  Email
-                </p>
-                <a
-                  href="mailto:nizrnurafif644@gmail.com"
-                  className="text-sm font-medium text-[#0B0F19] underline-offset-4 hover:underline"
+            <div className="space-y-8">
+              {/* Contact Form */}
+              <div className="rounded-xl border border-slate-200 bg-white/50 p-6 shadow-sm">
+                <h3 className="text-sm font-semibold text-[#0B0F19] mb-4 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Kirim Pesan Langsung
+                </h3>
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const formData = new FormData(e.currentTarget);
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    const message = formData.get('message');
+                    
+                    const subject = `Portfolio Contact from ${name}`;
+                    const body = `Nama: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0APesan:%0D%0A${message}`;
+                    
+                    window.location.href = `mailto:nizrnurafif644@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+                  }}
+                  className="space-y-4"
                 >
-                  nizrnurafif644@gmail.com
-                </a>
-              </div>
-              <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
-                  WhatsApp
-                </p>
-                <a
-                  href="https://wa.me/6281806344925"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm font-medium text-[#0B0F19] underline-offset-4 hover:underline"
-                >
-                  081806344925
-                </a>
-              </div>
-              <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
-                  Professional Links
-                </p>
-                <div className="flex flex-col gap-2 text-sm font-medium">
-                  <a
-                    href="https://github.com/Nizarafif"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-slate-700 underline-offset-4 hover:text-[#0B0F19] hover:underline"
+                  <div>
+                    <label htmlFor="name" className="block text-xs font-medium text-slate-700 mb-1.5">
+                      Nama Lengkap
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-2.5 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      placeholder="Masukkan nama Anda"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-xs font-medium text-slate-700 mb-1.5">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-2.5 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all"
+                      placeholder="email@example.com"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-xs font-medium text-slate-700 mb-1.5">
+                      Pesan
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={5}
+                      className="w-full px-4 py-2.5 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all resize-none"
+                      placeholder="Tulis pesan Anda di sini..."
+                    ></textarea>
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    className="w-full bg-[#0F766E] text-white px-6 py-3 rounded-lg text-sm font-semibold shadow-lg shadow-teal-700/20 transition-all duration-200 hover:-translate-y-1 hover:bg-[#0c5c56] hover:shadow-teal-700/30"
                   >
-                    https://github.com/Nizarafif
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/nizar-nur-afif"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-slate-700 underline-offset-4 hover:text-[#0B0F19] hover:underline"
-                  >
-                    https://www.linkedin.com/in/nizar-nur-afif
-                  </a>
+                    Kirim Pesan via Email
+                  </button>
+                </form>
+              </div>
+
+              {/* Contact Info */}
+              <div className="space-y-4">
+                <p className="text-sm text-slate-600">
+                  Atau hubungi saya langsung melalui:
+                </p>
+                
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="space-y-2 rounded-xl border border-slate-200 bg-white/50 p-4 shadow-sm hover:shadow-md transition-shadow">
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
+                      Email
+                    </p>
+                    <a
+                      href="mailto:nizrnurafif644@gmail.com"
+                      className="text-sm font-medium text-[#0B0F19] underline-offset-4 hover:underline block"
+                    >
+                      nizrnurafif644@gmail.com
+                    </a>
+                  </div>
+                  
+                  <div className="space-y-2 rounded-xl border border-slate-200 bg-white/50 p-4 shadow-sm hover:shadow-md transition-shadow">
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
+                      WhatsApp
+                    </p>
+                    <a
+                      href="https://wa.me/6281806344925"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm font-medium text-[#0B0F19] underline-offset-4 hover:underline block"
+                    >
+                      081806344925
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="space-y-2 rounded-xl border border-slate-200 bg-white/50 p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
+                    Professional Links
+                  </p>
+                  <div className="flex flex-col gap-2 text-sm font-medium">
+                    <a
+                      href="https://github.com/Nizarafif"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-slate-700 underline-offset-4 hover:text-[#0B0F19] hover:underline"
+                    >
+                      https://github.com/Nizarafif
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/nizar-nur-afif"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-slate-700 underline-offset-4 hover:text-[#0B0F19] hover:underline"
+                    >
+                      https://www.linkedin.com/in/nizar-nur-afif
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </main>
+
+
 
       {/* Footer */}
       <footer className="border-t border-[#E2E8F0] bg-white">
