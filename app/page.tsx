@@ -262,7 +262,7 @@ export default function Home() {
                 {displayName}
               </span>
             </h1>
-            <p className="max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">
+            <p className="max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base text-justify">
               Saya adalah Fullstack Developer profesional yang berdedikasi untuk menciptakan solusi digital end-to-end yang elegan dan berdampak. Dengan keahlian di frontend dan backend, saya membangun aplikasi web yang tidak hanya responsif dan cepat, tetapi juga scalable, aman, dan memberikan pengalaman pengguna yang intuitif.
             </p>
             <div className="flex flex-wrap items-center gap-3">
@@ -365,13 +365,13 @@ export default function Home() {
               </p>
             </div>
             <div className="space-y-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-              <p>
+              <p className="text-justify">
                 Saya seorang fullstack developer yang berpengalaman membangun aplikasi web
                 dari frontend hingga backend. Terbiasa bekerja dengan stack JavaScript/TypeScript modern
                 (React, Next.js) untuk frontend, dan Node.js dengan Express untuk backend,
                 serta database relational (PostgreSQL, MySQL) maupun NoSQL (MongoDB).
               </p>
-              <p>
+              <p className="text-justify">
                 Dalam setiap project, saya fokus pada arsitektur yang scalable, clean code,
                 dan best practices seperti RESTful API design, database optimization, dan
                 security. Saya juga memperhatikan struktur folder, separation of concerns,
@@ -484,19 +484,19 @@ export default function Home() {
                         <p className="font-semibold text-[11px] text-slate-500">
                           Problem
                         </p>
-                        <p className="mt-1 text-[13px]">{project.problem}</p>
+                        <p className="mt-1 text-[13px] text-justify">{project.problem}</p>
                       </div>
                       <div>
                         <p className="font-semibold text-[11px] text-slate-500">
                           Approach
                         </p>
-                        <p className="mt-1 text-[13px]">{project.solution}</p>
+                        <p className="mt-1 text-[13px] text-justify">{project.solution}</p>
                       </div>
                       <div>
                         <p className="font-semibold text-[11px] text-slate-500">
                           Result / Features
                         </p>
-                        <p className="mt-1 text-[13px]">{project.result}</p>
+                        <p className="mt-1 text-[13px] text-justify">{project.result}</p>
                       </div>
                     </div>
                     <div className="mt-3 flex flex-wrap gap-1 text-[11px] text-slate-500">
@@ -574,7 +574,7 @@ export default function Home() {
                           {exp.period}
                         </span>
                       </div>
-                      <p className="mt-2 text-sm text-slate-600">
+                      <p className="mt-2 text-sm text-slate-600 text-justify">
                         {exp.description}
                       </p>
                     </div>
