@@ -274,7 +274,8 @@ export default function Home() {
                 View Projects
               </a>
               <a
-                href="/cv.pdf"
+                href="/CV/CV.pdf"
+                download="Nizar_Nur_Afif_CV.pdf"
                 className="inline-flex items-center justify-center rounded-lg border border-[#0B0F19] px-5 py-2.5 text-xs font-medium text-[#0B0F19] transition-colors duration-150 hover:bg-[#0B0F19] hover:text-white"
               >
                 Download CV
