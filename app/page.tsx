@@ -750,7 +750,7 @@ export default function Home() {
                 <div className="grid gap-4 sm:grid-cols-2">
                   {/* Email */}
                   <a
-                    href="mailto:nizrnurafif644@gmail.com"
+                    href="mailto:nizarnurafif644@gmail.com"
                     className="group flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-red-200 hover:shadow-md"
                   >
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-50 text-red-600 group-hover:bg-red-100 transition-colors">
@@ -760,7 +760,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-slate-900">Email</p>
-                      <p className="text-xs text-slate-500 group-hover:text-red-700 transition-colors">nizrnurafif644@gmail.com</p>
+                      <p className="text-xs text-slate-500 group-hover:text-red-700 transition-colors">nizarnurafif644@gmail.com</p>
                     </div>
                   </a>
 
