@@ -827,9 +827,8 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-[#E2E8F0] bg-white">
-        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-2 px-4 py-4 text-[11px] text-slate-500 sm:flex-row sm:px-6 lg:px-0">
+        <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-2 px-4 py-4 text-[11px] text-slate-500 sm:px-6 lg:px-0">
           <span>© {year} Nizar Nur Afif. All rights reserved.</span>
-          <span>Built with Next.js & Tailwind CSS.</span>
         </div>
       </footer>
     </div>
